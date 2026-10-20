@@ -1,9 +1,10 @@
 # Starshield in 14 cards
 
-Built from [research.md](research.md). Cards marked *Reported* rest on single or anonymous sources. Images are illustrations, not photos.
+Built from [research.md](research.md). Cards marked *Reported* rest on single or anonymous sources. Five cards use freely licensed photos from Wikimedia Commons; the rest use drawn illustrations.
 
 ## 1. Starshield is SpaceX's military version of Starlink
-![Illustration of a Starlink-style satellite carrying a shield emblem above Earth](img/what-is-starshield.svg)
+![A stack of Starlink satellites, the design Starshield is based on, before deployment in orbit](https://commons.wikimedia.org/wiki/Special:FilePath/Starlink_Mission_%2847926144123%29.jpg?width=960)
+*Image: [SpaceX, CC0 · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Starlink_Mission_%2847926144123%29.jpg)*
 
 **Basics** · 2022-12
 
@@ -13,6 +14,7 @@ Source: [Space.com](https://www.space.com/spacex-starshield-space-force-contract
 
 ## 2. Musk: the U.S. government controls Starshield
 ![Illustration of a red shield with white stars between quotation marks](img/who-controls-it.svg)
+*Image: Illustration, not a photo*
 
 **Basics** · 2026-10-15
 
@@ -22,6 +24,7 @@ Source: [CNBC](https://www.cnbc.com/2026/10/15/elon-musk-starlink-ukraine-trump-
 
 ## 3. SpaceX is building a spy-satellite network for the NRO
 ![Illustration of a swarm of small satellites aiming imaging beams at Earth](img/nro-spy-network.svg)
+*Image: Illustration, not a photo*
 
 **Contracts & Money** · 2024-03-16 · *Reported*
 
@@ -30,7 +33,8 @@ Reuters reported in March 2024 that Starshield is building hundreds of imaging s
 Source: [Spaceflight Now](https://spaceflightnow.com/?p=66251)
 
 ## 4. First NRO proliferated-constellation launch: May 2024
-![Illustration of a rocket climbing into space, labeled NROL-146, May 22, 2024](img/first-nro-launch.svg)
+![A Falcon 9 rocket launching (a Starlink mission, not NROL-146 itself)](https://commons.wikimedia.org/wiki/Special:FilePath/Falcon_9_Starlink_4-21_%287306871%29.jpeg?width=960)
+*Image: [U.S. Space Force, public domain · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Falcon_9_Starlink_4-21_%287306871%29.jpeg)*
 
 **Timeline** · 2024-05-22
 
@@ -40,6 +44,7 @@ Source: [Spaceflight Now](https://spaceflightnow.com/?p=66251)
 
 ## 5. Roughly 250 Starshield satellites may be in orbit
 ![Illustration of Earth ringed by orbits dotted with satellites, labeled about 249](img/how-many-satellites.svg)
+*Image: Illustration, not a photo*
 
 **Capabilities** · 2026-10 · *Reported*
 
@@ -49,6 +54,7 @@ Source: [Orbital Radar](https://orbitalradar.com/starshield-satellites)
 
 ## 6. The first public Starshield deal was worth $70 million
 ![Illustration of a contract stamped $70M](img/first-space-force-deal.svg)
+*Image: Illustration, not a photo*
 
 **Contracts & Money** · 2023-09-01
 
@@ -58,6 +64,7 @@ Source: [Space.com](https://www.space.com/spacex-starshield-space-force-contract
 
 ## 7. SpaceX won about $6.45 billion for Golden Dome in one week
 ![Illustration of a golden dome over Earth ringed by satellites, labeled $6.45B](img/golden-dome-awards.svg)
+*Image: Illustration, not a photo*
 
 **Contracts & Money** · 2026-05-29
 
@@ -67,6 +74,7 @@ Source: [Bloomberg](https://www.bloomberg.com/news/articles/2026-05-29/spacex-wi
 
 ## 8. Starshield will carry a new military data network
 ![Illustration of satellites linked into a mesh network](img/data-network-backbone.svg)
+*Image: Illustration, not a photo*
 
 **Capabilities** · 2026-05-26
 
@@ -76,6 +84,7 @@ Source: [DefenseScoop](https://defensescoop.com/2026/05/27/space-force-awards-sp
 
 ## 9. The Pentagon paid for Ukraine to use about 3,000 Starshield terminals
 ![Illustration of a flat satellite terminal sending signal waves over Ukraine's flag colors, labeled 3,000](img/ukraine-terminals.svg)
+*Image: Illustration, not a photo*
 
 **Players** · 2024
 
@@ -84,7 +93,8 @@ A Pentagon contract in late 2024 expanded Ukraine's military Starshield access f
 Source: [Fortune](https://fortune.com/2026/10/19/ukraine-starlink-starshield-drone-speed-limit-musk-trump/)
 
 ## 10. Ukraine's drones lose Starshield above about 100 mph
-![Illustration of a fast drone losing signal next to a speedometer at 100 mph](img/ukraine-speed-cap.svg)
+![Ukrainian military FPV strike drones](https://commons.wikimedia.org/wiki/Special:FilePath/UA_military_FPV_drones_05.jpg?width=960)
+*Image: [Army Inform, CC BY 4.0 · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:UA_military_FPV_drones_05.jpg)*
 
 **Controversy** · 2026-10-14
 
@@ -94,6 +104,7 @@ Source: [Tom's Hardware](https://www.tomshardware.com/tech-industry/drones/space
 
 ## 11. Who ordered the cap? Musk, Reuters and Rubio disagree
 ![Illustration of three speech bubbles labeled Musk, Reuters and Rubio around a question mark](img/who-ordered-cap.svg)
+*Image: Illustration, not a photo*
 
 **Controversy** · 2026-10-16 · *Reported*
 
@@ -102,7 +113,8 @@ Musk pointed to the U.S. government. Reuters, citing two U.S. officials and one 
 Source: [CNBC](https://www.cnbc.com/2026/10/16/order-to-limit-starshield-for-ukraine-came-from-inside-white-house-reuters-reports.html)
 
 ## 12. Rubio: Ukraine has no Starshield access for now
-![Illustration of crossed-out signal bars over Ukraine's flag colors, labeled offline](img/ukraine-access-now.svg)
+![Official portrait of Secretary of State Marco Rubio](https://commons.wikimedia.org/wiki/Special:FilePath/Official_portrait_of_Secretary_Marco_Rubio.jpg?width=960)
+*Image: [U.S. Department of State, public domain · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Official_portrait_of_Secretary_Marco_Rubio.jpg)*
 
 **Controversy** · 2026-10-18
 
@@ -111,7 +123,8 @@ On October 18, 2026, Rubio said Starshield is currently unavailable to Ukraine, 
 Source: [Al Jazeera](https://www.aljazeera.com/news/2026/10/18/rubio-says-ukraine-without-access-to-starshield-future-under-discussion)
 
 ## 13. Lawmakers question Musk's role in defense contracts
-![Illustration of a balance scale weighing money against a government dome](img/conflict-of-interest.svg)
+![The west front of the U.S. Capitol](https://commons.wikimedia.org/wiki/Special:FilePath/United_States_Capitol_-_west_front.jpg?width=960)
+*Image: [Architect of the Capitol, public domain · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:United_States_Capitol_-_west_front.jpg)*
 
 **Controversy** · 2025-05
 
@@ -121,6 +134,7 @@ Source: [The Hill via Yahoo](https://www.yahoo.com/news/democrats-eye-musk-role-
 
 ## 14. Much of Starshield is still classified
 ![Illustration of a redacted document stamped classified](img/secrecy.svg)
+*Image: Illustration, not a photo*
 
 **Players** · 2026-06-06
 

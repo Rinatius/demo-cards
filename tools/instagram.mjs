@@ -12,14 +12,25 @@ const cards = JSON.parse(readFileSync(input, 'utf8'));
 mkdirSync(outDir, { recursive: true });
 
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-// Optional photo: card.image may be a URL/path string or { url | src, credit }.
-const photo = c => {
+// Optional photo: card.image may be a URL/path string or { url | src, credit, fallback }.
+// Everything is inlined as a data URL (setContent pages can't read file:// URLs);
+// if a remote photo can't be downloaded, the local fallback image is used instead.
+const mime = p => `image/${extname(p).slice(1).replace('jpg', 'jpeg').replace('svg', 'svg+xml')}`;
+const inline = p => `data:${mime(p)};base64,${readFileSync(resolve(dirname(input), p)).toString('base64')}`;
+const photo = async c => {
   const img = typeof c.image === 'string' ? { url: c.image } : c.image && { ...c.image, url: c.image.url ?? c.image.src };
   if (!img?.url) return null;
-  // setContent pages can't read file:// URLs, so local photos are inlined.
-  const url = /^https?:|^data:/.test(img.url) ? img.url
-    : `data:image/${extname(img.url).slice(1).replace('jpg', 'jpeg').replace('svg', 'svg+xml')};base64,${readFileSync(resolve(dirname(input), img.url)).toString('base64')}`;
-  return { url, credit: img.credit };
+  if (/^data:/.test(img.url)) return { url: img.url, credit: img.credit };
+  if (!/^https?:/.test(img.url)) return { url: inline(img.url), credit: img.credit };
+  try {
+    const res = await fetch(img.url, { signal: AbortSignal.timeout(15000) });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const type = res.headers.get('content-type') || 'image/jpeg';
+    return { url: `data:${type};base64,${Buffer.from(await res.arrayBuffer()).toString('base64')}`, credit: img.credit };
+  } catch (err) {
+    console.warn(`photo failed for ${c.id} (${err.message})${img.fallback ? ', using fallback' : ''}`);
+    return img.fallback ? { url: inline(img.fallback), credit: 'Illustration, not a photo' } : null;
+  }
 };
 const total = cards.length + 1;
 
@@ -54,8 +65,8 @@ const cover = page(`<div class="pad cover">
   <p>${cards.length} key facts, each with its source.</p>
   <div class="swipe">Swipe →</div></div>`);
 
-const slide = (c, i) => {
-  const ph = photo(c);
+const slide = async (c, i) => {
+  const ph = await photo(c);
   return page(`${ph ? `<div class="photo" style="background-image:url('${esc(ph.url)}')">${ph.credit ? `<span class="credit">${esc(ph.credit)}</span>` : ''}</div>` : ''}
   <div class="pad">
     <div class="top"><span class="cat">${esc(c.category)}</span><span>${i + 2}/${total}</span></div>
@@ -67,7 +78,7 @@ const slide = (c, i) => {
 
 const browser = await chromium.launch();
 const tab = await browser.newPage({ viewport: { width: 1080, height: 1350 } });
-const slides = [cover, ...cards.map(slide)];
+const slides = [cover, ...await Promise.all(cards.map(slide))];
 for (const [i, html] of slides.entries()) {
   await tab.setContent(html, { waitUntil: 'networkidle' });
   const name = `${String(i + 1).padStart(2, '0')}-${i ? cards[i - 1].id : 'cover'}.png`;

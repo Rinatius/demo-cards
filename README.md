@@ -6,7 +6,7 @@ A static site that turns news research into short, sourced cards.
 - `cards/topics.json` lists the topics.
 - `cards/<topic>/cards.json` holds the cards; `cards.md` is the same set for reading.
 
-Card fields: `id`, `category`, `headline` (under 70 chars), `body` (1 to 3 sentences), `source` (`name`, `url`), `date`, `confidence` (`confirmed` or `reported`; reported cards show a *Reported* tag), optional `image` (`src` relative to the topic folder or a full URL, `alt`, `credit`).
+Card fields: `id`, `category`, `headline` (under 70 chars), `body` (1 to 3 sentences), `source` (`name`, `url`), `date`, `confidence` (`confirmed` or `reported`; reported cards show a *Reported* tag), optional `image` (`src` relative to the topic folder or a full URL, `alt`, `credit`, `page` linking the credit, `fallback` shown if `src` fails to load).
 
 Preview locally with `python3 -m http.server` and open http://localhost:8000. It also works as-is on GitHub Pages.
 
@@ -16,4 +16,4 @@ Preview locally with `python3 -m http.server` and open http://localhost:8000. It
 
     NODE_PATH=$(npm root -g) node tools/instagram.mjs cards/starshield/cards.json out/starshield "Starshield explained"
 
-If a card has an optional `image` field (a URL or a path relative to cards.json, or `{ "url" or "src", "credit" }`; SVG works too), the photo fills the top of its slide. Instagram allows up to 20 images per carousel.
+If a card has an optional `image` field (a URL or a path relative to cards.json, or `{ "url" or "src", "credit", "fallback" }`; SVG works too; if a remote photo cannot be downloaded the `fallback` image is used), the photo fills the top of its slide. Instagram allows up to 20 images per carousel.

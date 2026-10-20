@@ -37,7 +37,8 @@
   }
   figure { margin: -18px -20px 4px; position: relative; }
   figure img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #0b1626; }
-  figcaption { position: absolute; left: 10px; top: 6px; font-size: .7rem; color: #e8eef5; opacity: .75; }
+  figcaption { position: absolute; left: 10px; top: 6px; font-size: .7rem; color: #e8eef5; opacity: .85; text-shadow: 0 1px 3px #000; }
+  figcaption a { color: inherit; }
   .meta { display: flex; justify-content: space-between; gap: 8px; font-size: .8rem; color: var(--muted); }
   .cat { text-transform: uppercase; letter-spacing: .04em; font-weight: 600; color: var(--accent); }
   h2 { margin: 0; font-size: 1.1rem; line-height: 1.3; }
@@ -83,6 +84,8 @@
     render('All');
   }
 
+  const resolveSrc = s => /^https?:/.test(s) ? s : `cards/${topicId}/${s}`;
+
   function card(c) {
     const a = el('article');
     a.id = c.id;
@@ -96,10 +99,23 @@
     if (c.image) {
       const fig = el('figure');
       const img = el('img');
-      img.src = /^https?:/.test(c.image.src) ? c.image.src : `cards/${topicId}/${c.image.src}`;
+      const cap = el('figcaption', '', c.image.credit);
+      if (c.image.page) {
+        const link = el('a', '', c.image.credit);
+        link.href = c.image.page; link.target = '_blank'; link.rel = 'noopener';
+        cap.replaceChildren(link);
+      }
+      // If a remote photo fails to load, fall back to the card's illustration.
+      img.onerror = () => {
+        if (!c.image.fallback || img.dataset.fellBack) return;
+        img.dataset.fellBack = '1';
+        img.src = resolveSrc(c.image.fallback);
+        cap.textContent = 'Illustration, not a photo';
+      };
+      img.src = resolveSrc(c.image.src);
       img.alt = c.image.alt || ''; img.loading = 'lazy';
       fig.append(img);
-      if (c.image.credit) fig.append(el('figcaption', '', c.image.credit));
+      if (c.image.credit) fig.append(cap);
       a.append(fig);
     }
     a.append(meta, el('h2', '', c.headline), el('p', '', c.body), foot);
