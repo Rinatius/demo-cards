@@ -9,3 +9,11 @@ A static site that turns news research into short, sourced cards.
 Card fields: `id`, `category`, `headline` (under 70 chars), `body` (1 to 3 sentences), `source` (`name`, `url`), `date`, `confidence` (`confirmed` or `reported`; reported cards show a *Reported* tag).
 
 Preview locally with `python3 -m http.server` and open http://localhost:8000. It also works as-is on GitHub Pages.
+
+## Instagram carousel
+
+`tools/instagram.mjs` renders a topic as 1080x1350 PNG slides (a cover plus one slide per card), ready for an Instagram carousel. It needs Node and Playwright (`npm i -g playwright && npx playwright install chromium`).
+
+    NODE_PATH=$(npm root -g) node tools/instagram.mjs cards/starshield/cards.json out/starshield "Starshield explained"
+
+If a card has an optional `image` field (a URL or a path relative to cards.json, or `{ "url", "credit" }`), the photo fills the top of its slide. Instagram allows up to 20 images per carousel.
