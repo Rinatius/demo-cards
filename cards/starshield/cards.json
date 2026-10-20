@@ -1,0 +1,128 @@
+[
+  {
+    "id": "what-is-starshield",
+    "category": "Basics",
+    "headline": "Starshield is SpaceX's military version of Starlink",
+    "body": "SpaceX unveiled Starshield in December 2022 as a satellite line for government and military customers. It covers secure communications, Earth-imaging payloads, and government payloads hosted on Starlink-derived satellites.",
+    "source": {"name": "Space.com", "url": "https://www.space.com/spacex-starshield-space-force-contract"},
+    "date": "2022-12",
+    "confidence": "confirmed"
+  },
+  {
+    "id": "who-controls-it",
+    "category": "Basics",
+    "headline": "Musk: the U.S. government controls Starshield",
+    "body": "In October 2026 Elon Musk said Starshield systems are \"owned and controlled by the U.S. government\" and that any limits on speed or usage are decided by the U.S. military \"and ultimately POTUS.\"",
+    "source": {"name": "CNBC", "url": "https://www.cnbc.com/2026/10/15/elon-musk-starlink-ukraine-trump-energy-ceasefire.html"},
+    "date": "2026-10-15",
+    "confidence": "confirmed"
+  },
+  {
+    "id": "nro-spy-network",
+    "category": "Contracts & Money",
+    "headline": "SpaceX is building a spy-satellite network for the NRO",
+    "body": "Reuters reported in March 2024 that Starshield is building hundreds of imaging satellites for the National Reconnaissance Office that can operate as a swarm in low orbit. The 2021 contract is reported at about $1.8 billion, a figure never officially confirmed.",
+    "source": {"name": "Spaceflight Now", "url": "https://spaceflightnow.com/?p=66251"},
+    "date": "2024-03-16",
+    "confidence": "reported"
+  },
+  {
+    "id": "first-nro-launch",
+    "category": "Timeline",
+    "headline": "First NRO proliferated-constellation launch: May 2024",
+    "body": "The NROL-146 mission launched on a Falcon 9 from Vandenberg on May 22, 2024, the first launch of the NRO's new proliferated architecture. Every NRO Starshield mission since has also flown on Falcon 9 from Vandenberg.",
+    "source": {"name": "Spaceflight Now", "url": "https://spaceflightnow.com/?p=66251"},
+    "date": "2024-05-22",
+    "confidence": "confirmed"
+  },
+  {
+    "id": "how-many-satellites",
+    "category": "Capabilities",
+    "headline": "Roughly 250 Starshield satellites may be in orbit",
+    "body": "No official count exists. A third-party tracker counts about 249 Starshield satellites across 14 missions, about 245 of them for the NRO.",
+    "source": {"name": "Orbital Radar", "url": "https://orbitalradar.com/starshield-satellites"},
+    "date": "2026-10",
+    "confidence": "reported"
+  },
+  {
+    "id": "first-space-force-deal",
+    "category": "Contracts & Money",
+    "headline": "The first public Starshield deal was worth $70 million",
+    "body": "In September 2023 the Space Force signed a one-year, $70 million Starshield task order, the first award under a satellite-services program shared by 16 vendors and capped at $900 million.",
+    "source": {"name": "Space.com", "url": "https://www.space.com/spacex-starshield-space-force-contract"},
+    "date": "2023-09-01",
+    "confidence": "confirmed"
+  },
+  {
+    "id": "golden-dome-awards",
+    "category": "Contracts & Money",
+    "headline": "SpaceX won about $6.45 billion for Golden Dome in one week",
+    "body": "In late May 2026 the Space Force gave SpaceX $2.29 billion for a military data network and $4.16 billion for satellites that track airborne threats, both parts of the Golden Dome missile-defense effort.",
+    "source": {"name": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-05-29/spacex-wins-4-billion-contract-for-us-golden-dome-satellites"},
+    "date": "2026-05-29",
+    "confidence": "confirmed"
+  },
+  {
+    "id": "data-network-backbone",
+    "category": "Capabilities",
+    "headline": "Starshield will carry a new military data network",
+    "body": "The $2.29 billion Space Data Network Backbone, formerly called MILNET, is built on Starshield, with a prototype due by the end of 2027. Earlier reports put its size at about 480 satellites, though estimates vary.",
+    "source": {"name": "DefenseScoop", "url": "https://defensescoop.com/2026/05/27/space-force-awards-spacex-contract-backbone-satcom-network/"},
+    "date": "2026-05-26",
+    "confidence": "confirmed"
+  },
+  {
+    "id": "ukraine-terminals",
+    "category": "Players",
+    "headline": "The Pentagon paid for Ukraine to use about 3,000 Starshield terminals",
+    "body": "A Pentagon contract in late 2024 expanded Ukraine's military Starshield access from roughly 500 to roughly 3,000 terminals. These are separate from the tens of thousands of commercial Starlink terminals, many paid for by Poland.",
+    "source": {"name": "Fortune", "url": "https://fortune.com/2026/10/19/ukraine-starlink-starshield-drone-speed-limit-musk-trump/"},
+    "date": "2024",
+    "confidence": "confirmed"
+  },
+  {
+    "id": "ukraine-speed-cap",
+    "category": "Controversy",
+    "headline": "Ukraine's drones lose Starshield above about 100 mph",
+    "body": "Around October 13, 2026, Ukrainian officials said military Starshield terminals cut out above roughly 160 km/h, without warning. Some units reported drops at even lower speeds, which hurts strike drones and Shahed interceptors.",
+    "source": {"name": "Tom's Hardware", "url": "https://www.tomshardware.com/tech-industry/drones/spacex-limits-starlink-service-for-ukraines-high-speed-military-drones-without-prior-warning-ukrainian-officials-say-limitation-significantly-complicates-logistics-and-drone-operations"},
+    "date": "2026-10-14",
+    "confidence": "confirmed"
+  },
+  {
+    "id": "who-ordered-cap",
+    "category": "Controversy",
+    "headline": "Who ordered the cap? Musk, Reuters and Rubio disagree",
+    "body": "Musk pointed to the U.S. government. Reuters, citing two U.S. officials and one Western official, reported the order came from inside the White House. Secretary of State Rubio called that \"categorically false.\"",
+    "source": {"name": "CNBC", "url": "https://www.cnbc.com/2026/10/16/order-to-limit-starshield-for-ukraine-came-from-inside-white-house-reuters-reports.html"},
+    "date": "2026-10-16",
+    "confidence": "reported"
+  },
+  {
+    "id": "ukraine-access-now",
+    "category": "Controversy",
+    "headline": "Rubio: Ukraine has no Starshield access for now",
+    "body": "On October 18, 2026, Rubio said Starshield is currently unavailable to Ukraine, and that Kyiv's request to use it for deep strikes inside Russia is \"under discussion.\" Senators Tillis and Shaheen have pushed back on the limits.",
+    "source": {"name": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/18/rubio-says-ukraine-without-access-to-starshield-future-under-discussion"},
+    "date": "2026-10-18",
+    "confidence": "confirmed"
+  },
+  {
+    "id": "conflict-of-interest",
+    "category": "Controversy",
+    "headline": "Lawmakers question Musk's role in defense contracts",
+    "body": "In May 2025, 42 Democratic lawmakers asked the Pentagon inspector general to look at Musk's role in Golden Dome contracting while he served in government. SpaceX went on to win about $6.45 billion in Golden Dome awards.",
+    "source": {"name": "The Hill via Yahoo", "url": "https://www.yahoo.com/news/democrats-eye-musk-role-missile-174511640.html"},
+    "date": "2025-05",
+    "confidence": "confirmed"
+  },
+  {
+    "id": "secrecy",
+    "category": "Players",
+    "headline": "Much of Starshield is still classified",
+    "body": "The NRO confirms the program but won't describe SpaceX's role, and some launches carry Starshield satellites for undisclosed customers, such as two that flew alongside 21 Starlinks on June 6, 2026.",
+    "source": {"name": "Spaceflight Now", "url": "https://spaceflightnow.com/2026/06/06/spacex-to-launch-2-starshield-satellites-during-saturday-night-starlink-mission/"},
+    "date": "2026-06-06",
+    "confidence": "confirmed"
+  }
+]
