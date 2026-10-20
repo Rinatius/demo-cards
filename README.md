@@ -16,4 +16,4 @@ Preview locally with `python3 -m http.server` and open http://localhost:8000. It
 
     NODE_PATH=$(npm root -g) node tools/instagram.mjs cards/starshield/cards.json out/starshield "Starshield explained"
 
-If a card has an optional `image` field (a URL or a path relative to cards.json, or `{ "url", "credit" }`), the photo fills the top of its slide. Instagram allows up to 20 images per carousel.
+If a card has an optional `image` field (a URL or a path relative to cards.json, or `{ "url" or "src", "credit" }`; SVG works too), the photo fills the top of its slide. Instagram allows up to 20 images per carousel.

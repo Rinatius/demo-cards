@@ -12,13 +12,13 @@ const cards = JSON.parse(readFileSync(input, 'utf8'));
 mkdirSync(outDir, { recursive: true });
 
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-// Optional photo: card.image may be a URL/path string or { url, credit }.
+// Optional photo: card.image may be a URL/path string or { url | src, credit }.
 const photo = c => {
-  const img = typeof c.image === 'string' ? { url: c.image } : c.image;
+  const img = typeof c.image === 'string' ? { url: c.image } : c.image && { ...c.image, url: c.image.url ?? c.image.src };
   if (!img?.url) return null;
   // setContent pages can't read file:// URLs, so local photos are inlined.
   const url = /^https?:|^data:/.test(img.url) ? img.url
-    : `data:image/${extname(img.url).slice(1).replace('jpg', 'jpeg')};base64,${readFileSync(resolve(dirname(input), img.url)).toString('base64')}`;
+    : `data:image/${extname(img.url).slice(1).replace('jpg', 'jpeg').replace('svg', 'svg+xml')};base64,${readFileSync(resolve(dirname(input), img.url)).toString('base64')}`;
   return { url, credit: img.credit };
 };
 const total = cards.length + 1;
